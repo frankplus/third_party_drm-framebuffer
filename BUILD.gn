@@ -1,0 +1,37 @@
+import("//build/ohos.gni")
+
+config("drm_config") {
+  cflags = [
+    "-O0",
+    "-ggdb",
+    "-pedantic",
+    "-Wall",
+    "-Wno-zero-length-array",
+  ]
+}
+
+ohos_source_set("drm_framebuffer_src") {
+  sources = [
+    "main.c",
+    "framebuffer.c",
+  ]
+
+  include_dirs = [
+    "//third_party/libdrm/include/drm",
+    "//third_party/libdrm",
+  ]
+
+  configs = [ ":drm_config" ]
+}
+
+ohos_executable("drm_framebuffer") {
+  deps = [
+    ":drm_framebuffer_src",
+    "//third_party/libdrm:libdrm",
+  ]
+
+  install_enable = true
+
+  part_name = "drm_framebuffer"
+  subsystem_name = "thirdparty"
+}

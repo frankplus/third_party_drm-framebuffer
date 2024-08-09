@@ -1,0 +1,36 @@
+{
+    "name": "@ohos/drm-framebuffer",
+    "description": "drm-framebuffer",
+    "version": "1.0",
+    "license": "epl-v20",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "third_party/drm-framebuffer"
+    },
+    "dirs": {},
+    "scripts": {},
+    "licensePath": "LICENSE",
+    "readmePath": {
+        "en": "README.md"
+    },
+    "component": {
+        "name": "drm-framebuffer",
+        "subsystem": "thirdparty",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [],
+        "rom": "",
+        "ram": "",
+        "deps": {
+            "components": [],
+            "third_party": ["cJSON"]
+        },
+        "build": {
+            "sub_component": [
+                "//third_party/drm-framebuffer:drm_framebuffer"
+            ],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}
