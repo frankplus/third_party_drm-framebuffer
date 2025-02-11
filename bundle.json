@@ -1,11 +1,11 @@
 {
-    "name": "@ohos/drm-framebuffer",
-    "description": "drm-framebuffer",
+    "name": "@ohos/drm_framebuffer",
+    "description": "drm_framebuffer",
     "version": "1.0",
     "license": "epl-v20",
     "publishAs": "code-segment",
     "segment": {
-        "destPath": "third_party/drm-framebuffer"
+        "destPath": "third_party/drm_framebuffer"
     },
     "dirs": {},
     "scripts": {},
@@ -14,7 +14,7 @@
         "en": "README.md"
     },
     "component": {
-        "name": "drm-framebuffer",
+        "name": "drm_framebuffer",
         "subsystem": "thirdparty",
         "syscap": [],
         "features": [],
@@ -23,11 +23,11 @@
         "ram": "",
         "deps": {
             "components": [],
-            "third_party": ["cJSON"]
+            "third_party": ["cJSON", "libdrm"]
         },
         "build": {
             "sub_component": [
-                "//third_party/drm-framebuffer:drm_framebuffer"
+                "//third_party/drm_framebuffer:drm_framebuffer"
             ],
             "inner_kits": [],
             "test": []
